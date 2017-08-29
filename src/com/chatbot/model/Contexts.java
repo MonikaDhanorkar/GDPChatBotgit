@@ -1,5 +1,7 @@
 package com.chatbot.model;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Contexts
 {
 private String name;

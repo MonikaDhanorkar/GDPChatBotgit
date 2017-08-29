@@ -16,7 +16,7 @@ import javax.activation.*;
   
 
 public class Bussiness 
-{public  String getData(String contry_id, String year, String email) throws IOException
+{public  String getData(String email,String contry_id, String year) throws IOException
 			{  
 				    
 					//Year validation
@@ -43,7 +43,7 @@ public class Bussiness
 						      
 						
 
-							File file=new File("C:\\Users\\pradnyap\\Downloads\\GDPData\\Book1.xls");
+							File file=new File("C:\\Users\\Administrator\\Desktop\\gdp.xls");
 							FileInputStream fin = new FileInputStream(file);
 							
 							HSSFWorkbook wb = new HSSFWorkbook(fin);
@@ -100,7 +100,7 @@ public class Bussiness
 						{
 							  final String from="dhanorkar.monika@gmail.com";//change accordingly  
 							  final String password="8007970174";//change accordingly  
-							   
+							   System.out.println("Sending mail to "+email_id);
 							  Properties props = new Properties();    
 							  props.put("mail.smtp.host", "smtp.gmail.com");    
 							  props.put("mail.smtp.socketFactory.port", "465");    
